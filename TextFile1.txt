@@ -1,0 +1,19 @@
+=PROJEYE AÝT NOTLAR=
+
+*Entities projemiz bizler için veritabanýna gidecek ve bir tablo oluþturacak deðerleri barýndýracaktýr.
+*DTU veritabaný objelerini parçaladýðý ve onlara küçük deðerler verdiði objelerdir, sýnýflardýr.
+*Data proje kýsmýmýz veritabaný ile ilgili iþleri halledecektir. Örnek olarak veritabanýna baðlanýlmasý bir verinin eklenmesi, düzenlenmesi veya silinmesi gibi iþlemleri gerçekleþtirecektir.
+*Services katmaný veriyi servis ettiðimiz ve servis etmek için hazýrladýðýmýz katmandýr. Ýþ mantýðý yürütülür. MEsela veritabanýndan gelen verilerin front end kýsmýna gönderilmeden önce hazýrlanmasý ve belirli iþlemlerden geçmesi gereken katmandýr.
+*Mvc katmaný ise front-end katmanýdýr.
+
+*EntityBase sýnýfýný ve IEntity arayüzünü oluþturalým. Veritabanýna yazýlacak tablolarda ortak bulunmasýný istediðimiz tablolarý bu base classta toplayacaðýz. IEntity ile veritabanýna gidecek sýnýflarla ilgili karýþýklýklarý önleyeceðiz.
+*Entities adlý bir klasör oluþturuyoruz. Ýçine de abstract klasörü ekliyoruz. EntityBase sýnýfýmýzý buraya koyacaðýz.
+*içerisine id, createddate, modifieddate, delete, active, createdbyname, modifiedbyname proplarýný ekledik.
+*Entities içine concrete klasörü açtýk. Somut nesnelerimizi ekleyeceðiz... veritabaný nesnesi vs.
+
+*Ýlk veritabaný nesnesimizi oluþturalým. (Category).
+*Category'nin içerisinde bulunmasý gereken bölümleri ekleyelim. Örn = Name, Description, Articles gibi...
+
+*Article sýnýfýmýzý oluþturalým.
+*Article kýsmýnda bulunmasý gereken konu baþlýklarýný ekleyelim. Örn= category id, category'ye ulaþmamýzý saðlayan property, user id, user, baþlýk, içerik, thumbnail, yorum sayýsý, date, yorum sayýsý, seo bilgileri gibi...
+*SEO: Arama motoru optimizasyonu demektir. Web sitelerini arama motorlarýnýn daha rahat bir þekilde anlayabilmesine "taramasýna" olanak saðlayacak þekilde arama motorlarýnýn kriterlerine uygun hale getirilerek "web sitesinin optimize edilmesi" hedeflenen anahatar kelimelere ait arama motoru aramalarýnda yükseltilmesidir.
