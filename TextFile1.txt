@@ -17,3 +17,21 @@
 *Article sýnýfýmýzý oluþturalým.
 *Article kýsmýnda bulunmasý gereken konu baþlýklarýný ekleyelim. Örn= category id, category'ye ulaþmamýzý saðlayan property, user id, user, baþlýk, içerik, thumbnail, yorum sayýsý, date, yorum sayýsý, seo bilgileri gibi...
 *SEO: Arama motoru optimizasyonu demektir. Web sitelerini arama motorlarýnýn daha rahat bir þekilde anlayabilmesine "taramasýna" olanak saðlayacak þekilde arama motorlarýnýn kriterlerine uygun hale getirilerek "web sitesinin optimize edilmesi" hedeflenen anahatar kelimelere ait arama motoru aramalarýnda yükseltilmesidir.
+*user ve role sýnýflarýmýzý oluþturduk.
+
+*Comment nesnesini oluþturalým ve alanlarýný ekleyelim.
+*Article ve comment birbirlerini refere ettikleri için bire çok iliþkiye sahip oldular.
+
+*Shared üzerinde IEntityRepository<T> arayüzümüzü oluþturuyoruz. Tüm DAL classlarýmýzda ortak kullanacaðýmýz metodlarý bu repository içerisine ekleyeceðiz.
+*Get(), GetAll(), Add(), Update(), Delete(), Any(), Count() gibi metodlarý IEntityRepository<T> içerisinde kullanarak kod tekrarýndan kaçýnmýþ olacaðýz.
+*Shared projemize eklememizin sebebi eðer baþka projelerde de kullanmak istiyorsan bu shared projesinden kolaylýkla çekebiliriz.
+
+*EfEntityRepository<T> sýnýfýmýzý oluþturup IEntityRepository<T> sýnýfýmýz ile implemente edelim ve EntityFramework kullanarak da bu metotlarýmýzýn içeriðini dolduralým.
+
+*Data projesi üzerinde IEntityRepository<T> interfaceimizin implementasyonunu yapalým. Bu sayede entitylerimize ait tüm repository interfacelerinin daha öncesinde yazmýþ olduðumuz metotlara sahip olmalarýný saðlýyoruz.
+*Classlarýn somut ve soyut olmasý zorunludur. Örneðin IArticleRepository --> ArticleRepository gibi...
+*Data kýsmýna referans ekliyoruz. Dataya Entities ve Shared'ý referans olarak ekliyoruz.
+*Generic repositorymizi entity repositorylere implement etmiþ olduk
+
+*Concrete yani somut classlar kodlayacaz. Abstract sýnýfýmýzýn içindeki classlarý implement edecek classlar oluþturacaðýz.
+*
