@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using ProgrammersBlog.Shared.Data.Concrete.EntityFramework;
 
-namespace ProgrammersBlog.Data.Concrete
+namespace ProgrammersBlog.Data.Concrete.EntityFramework.Repositories
 {
     //Somut bir sınıftır ve IArticleRepository'i implement eder.
-    public class ArticleRepository : EfEntityRepositoryBase<Article>, IArticleRepository
+    public class EfArticleRepository : EfEntityRepositoryBase<Article>, IArticleRepository
     {
         //DbContext verim bunu base e göndermemiz gerekiyor.
-        public ArticleRepository(DbContext context) : base(context)
+        public EfArticleRepository(DbContext context) : base(context)
         {
         }
     }
