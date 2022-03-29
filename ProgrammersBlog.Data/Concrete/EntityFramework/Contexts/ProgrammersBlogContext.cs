@@ -24,5 +24,15 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Contexts
             //Bu kısım kurduğumuz nugget sayesinde geliyor. Eğer farklı veritabanı yönetim sistemi kullanmak istersek örn mysql gibi... onun nuggetini kurarak devam edebiliriz.
             optionsBuilder.UseSqlServer(@"Server = DESKTOP-HNE43R2; Database = ProgrammersBlog; Trusted_Connection = True; Connect Timeout = 30; MultipleActiveResultSets = True;");
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //Codefirst
+            //Veritabanımız oluşurken buradaki configurationlar çalışaccak.
+            modelBuilder.ApplyConfiguration(new ArticleMap());
+            modelBuilder.ApplyConfiguration(new CategoryMap());
+            modelBuilder.ApplyConfiguration(new CommentMap());
+            modelBuilder.ApplyConfiguration(new RoleMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
+        }
     }
 }

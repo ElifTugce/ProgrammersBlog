@@ -48,3 +48,9 @@
 *Commentmap iþlemleri tamamlandý. Veritabanýnda olmasý gereken özellikler her bir alan için ayrý ayrý belirtildi.
 *Rolemap iþlemleri tamamlandý. Veritabanýnda olmasý gereken özellikler her bir alan için ayrý ayrý belirtildi.
 *Usermap iþlemleri tamamlandý. Veritabanýnda olmasý gereken özellikler her bir alan için ayrý ayrý belirtildi.
+*Tüm mapping iþlemlerini DbContext içerisinde bir configuration sýnýfý olarak çaðýracaðýz.Yani veritabanýna giderken ayarlarýný bu sýnýflardan al demiþ olacaðýz.
+
+*Unit Of Work tasarým desenini uygulamak için IUnitOfWork arayüzünü oluþturuyoruz.
+*Unit Of Work tasarým desenini kullanarak tüm repositoryleri tek bir yerden yönetebiliriz. Yani servis katmanýnda yeni bir kllanýcý eklerken role ve user a ihtiyaç duyarýz. unitofwork ile bu sýnýf üzerinden ikisine de eriþebiliriz.
+*Bizlere transaction yapýsý tutar. Transaction veritabýna gönderdiðimiz verilerin doðrulanmasý ve yönetilmesidir.
+*
